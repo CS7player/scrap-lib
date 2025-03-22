@@ -4,3 +4,4 @@
 
 export * from './lib/components/text-field/text-field.component';
 export * from './lib/components/clicker/clicker.component';
+export * from './lib/components/loader/loader.component';
