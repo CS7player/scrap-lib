@@ -1,0 +1,32 @@
+$bg-blue: #0077ff;
+$bg-light-blue: #4a77ff;
+$white-ink: #fff;
+$bg-dark-blue: #0057cc;
+.outer-shell {
+  box-sizing: border-box;
+  padding: 0.4rem;
+  button {
+    padding: 0.2rem 0.4rem;
+    font-size: 1rem;
+    font-weight: 100;
+    color: $white-ink;
+    background-color: $bg-blue;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.5rem;
+    transition: background 0.2s ease, transform 0.1s ease;
+    &:hover {
+      cursor: pointer;
+      background: $bg-light-blue;
+    }
+    &:active {
+      background: $bg-dark-blue; // Darker color when clicked
+      transform: scale(0.95); // Slight shrink effect
+    }
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+}

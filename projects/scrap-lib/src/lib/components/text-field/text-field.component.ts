@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-text-field',
+  selector: 'lib-text-field',
   imports: [FormsModule, CommonModule],
   templateUrl: './text-field.component.html',
   styleUrl: './text-field.component.scss',
@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 export class TextFieldComponent {
   @Input('ip_mdl') ip_mdl: UITextField | null = null;
   @Output() eventHandlerEmitter = new EventEmitter();
-  onEnter(event: any) {
+  onEnter() {
     this.eventHandlerEmitter.emit(this.ip_mdl);
   }
 }

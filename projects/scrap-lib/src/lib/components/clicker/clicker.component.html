@@ -1,0 +1,18 @@
+@if(ip_mdl){
+<div
+  class="outer-shell {{ ip_mdl!['osClass'] }} "
+  [style]="ip_mdl!['osStyles']"
+>
+  <button
+    (click)="afterClick()"
+    [disabled]="ip_mdl!['isDisabled']"
+    class="btn {{ ip_mdl!['clClass'] }}"
+    [style]="ip_mdl!['clStyles']"
+  >
+    {{ ip_mdl!["text"] }}
+    @if(ip_mdl!['icon']){
+    <i class="{{ ip_mdl!['icon'] }}"></i>
+    }
+  </button>
+</div>
+}
