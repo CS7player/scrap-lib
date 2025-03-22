@@ -1,0 +1,24 @@
+@if(ip_mdl){
+<div
+  class="outer-shell {{ ip_mdl!['osCustomClass'] }} "
+  [ngClass]="ip_mdl!['isRow'] ? 'isRow' : ''"
+  [style]="ip_mdl!['osStyles']"
+>
+  @if(ip_mdl!['labelText']){
+  <label [for]="ip_mdl!['formPostKey']">
+    {{ ip_mdl!["labelText"] }}
+    @if(ip_mdl!['isMandatory']){<span>*</span>} &nbsp;:
+  </label>
+  }
+  <input
+    [type]="ip_mdl!['inputType']"
+    [ngClass]="ip_mdl!['ipCustomClass']"
+    [style]="ip_mdl!['ipStyles']"
+    [placeholder]="ip_mdl!['placeHolder']"
+    [(ngModel)]="ip_mdl!['selectedValue']"
+    [disabled]="ip_mdl!['isDisabled']"
+    [readonly]="ip_mdl!['isEditable']"
+    (keyup)="onEnter($event)"
+  />
+</div>
+} 
